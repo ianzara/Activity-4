@@ -183,3 +183,11 @@ WHERE ofirstname='maria'
 )
 
 );
+
+SELECT a.animalid, a.name, COUNT(*) AS appointment_count
+FROM animals a
+JOIN appointments ap 
+	ON a.animalid = ap.animalid
+GROUP BY a.animalid, a.name
+ORDER BY appointment_count DESC
+LIMIT 1;
