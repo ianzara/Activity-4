@@ -164,3 +164,6 @@ WHERE animalid = (
 UPDATE doctors
 SET dlastname = 'Reyes-Gonzales'
 WHERE dlastname = 'Dr.Sofia';
+
+SELECT DISTINCT species
+FROM animals;
