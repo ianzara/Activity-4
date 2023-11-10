@@ -31,3 +31,13 @@ CREATE TABLE appointment (
     REFERENCES animals (animalid)
 
 );
+
+CREATE TABLE doctor (
+doctorid INT PRIMARY KEY,
+dfirstname VARCHAR(50),
+dlastname VARCHAR(50),
+specialty VARCHAR(100),
+phone VARCHAR(15),
+email VARCHAR(100),
+
+);
