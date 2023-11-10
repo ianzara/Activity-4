@@ -42,6 +42,31 @@ email VARCHAR(100),
 
 );
 
+CREATE TABLE invoices
+(
+invoiceid PRIMARY KEY,
+appointid INT,
+totalamount NUMERIC(10,2),
+paymentdate TIME,
+
+FOREIGN KEY (appointid) REFERENCES appointments (appointid)
+);
+
+CREATE TABLE medicalrecords
+(
+	record_id INT NOT NULL,
+	animal_id INT NOT NULL,
+	record_date TIMESTAMP NOT NULL,
+	doctor_id INT NOT NULL,
+	diagnosis TEXT NOT NULL,
+	prescription TEXT NOT NULL,
+	notes TEXT NOT NULL,
+	PRIMARY KEY (record_id),
+	FOREIGN KEY (animal_id) REFERENCES animals(animal_id),
+	FOREIGN KEY (doctor_id) REFERENCES doctors(doctor_id)
+);
+
+
 
 
 
